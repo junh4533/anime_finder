@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 require 'myanimelist_client'
 
 # First, create a client
@@ -18,3 +19,4 @@ if client.verify_credentials.ok?
   end
 
 end
+
