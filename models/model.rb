@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 require 'myanimelist_client'
 
 # First, create a client
