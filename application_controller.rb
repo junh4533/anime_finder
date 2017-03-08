@@ -1,5 +1,6 @@
 require 'dotenv/load'
 require 'bundler'
+require 'myanimelist', '~> 0.0.5'
 Bundler.require
 
 require_relative 'models/model.rb'
