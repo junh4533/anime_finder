@@ -6,11 +6,11 @@ def find_anime(anime_input)
 
   if client.verify_credentials.ok?
     results = client.search_anime anime_input
-    anime_array =[]
+    anime_array = []
     results.sort_by(&:score).reverse!.each do |anime|
       "#{anime.title} (#{anime.english}) - #{anime.score}"
       # "#{anime.title} (#{anime.english}) - #{anime.score}"
-       array << anime.title
+       anime_array << anime.title
     end
     return anime_array
   end
