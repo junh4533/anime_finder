@@ -1,23 +1,17 @@
 require 'myanimelist_client'
+require 'pp'
 
-# First, create a client
-# MyAnimeList.net requires a valid account to consume their API
-client = MyanimelistClient.new 'junh4533', 'weiqing4533weiqing4533'
-
-# Then you may want to check if your username / password are ok
-if client.verify_credentials.ok?
-
-  # Now you can use the API
-  # Let's search a good anime!
-  results = client.search_anime 'attack on titan'
-
-  # Everything is nicely wrapped in small objects
-  results.sort_by(&:score).reverse!.each do |anime|
-    # puts "#{anime.title} (#{anime.english}) - #{anime.score}"
-    # puts anime.image 
-    puts anime.title
+def find_anime(anime_input)
+  client = MyanimelistClient.new 'junh4533', 'weiqing4533weiqing4533'
+  if client.verify_credentials.ok?
+    results = client.search_anime anime_input
+    anime_array = []
+    results.sort_by(&:score).reverse!.each do |anime|
+      "#{anime.title} (#{anime.english}) - #{anime.score}"
+      # "#{anime.title} (#{anime.english}) - #{anime.score}"
+       anime_array << anime.title
+    end
+    return anime_array
   end
 
 end
-
-
