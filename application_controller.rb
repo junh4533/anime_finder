@@ -34,7 +34,6 @@ class ApplicationController < Sinatra::Base
   #   erb :result1
   # end
   
-  
 end
 
 
