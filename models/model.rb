@@ -13,9 +13,11 @@ if client.verify_credentials.ok?
 
   # Everything is nicely wrapped in small objects
   results.sort_by(&:score).reverse!.each do |anime|
-    puts "#{anime.title} (#{anime.english}) - #{anime.score}"
-    puts anime.image 
+    # puts "#{anime.title} (#{anime.english}) - #{anime.score}"
+    # puts anime.image 
+    puts anime.title
   end
 
 end
+
 

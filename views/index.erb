@@ -9,17 +9,55 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    
+    <!-- Pure CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" 
+    integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" 
+    crossorigin="anonymous">
     <!-- custom css -->
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <!-- custom JS -->
-    <script src="js/script.js"></script>
+    <script src="js/script.js">
+      
+    </script>
+    <style>
+      body {
+        background: #fff1e6;
+      }
+      h1 {
+        color: #000050;
+        font-size: 40px;
+      }
+      form {
+        position: relative;
+        margin: auto;
+        width: 300px;
+        padding: 10px;
+        top: 320px;
+        left:10px;
+      }
+      #header {
+        position: relative;
+        margin: auto;
+        width: 300px;
+        top: 350px;
+      }
+      
+    </style>
   </head>
   <body>
     
-    <div class="container-fluid">
-      <h1>Hello World!</h1>
+    <div class="container-fluid" id="header">
+      <h1>Welcome to Anime Finder!</h1>
     </div>
-    
+      <form action="/result.erb">
+        <input type="text" name="aname">
+        <button class='pure-button'>Search</button>
+      </form>
+      <div id="upperHalf">
+        
+      </div>
+      <div id="lowerHalf">
+        
+      </div>
   </body>
 </html>
