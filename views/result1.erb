@@ -18,7 +18,6 @@
   <body>
     
 <div class="container">
-
     <!--click on link results-->
     <table class="table table-striped">
       <thead>
@@ -28,10 +27,7 @@
       </thead>
       <tbody>
         <tr>
-          <td><%=@user_anime[:anime_titles][0]%></td>
-          <td><%=@user_anime[:anime_ratings][0]%></td>
-          <td><%=@user_anime[:anime_synopsis][0]%></td>
-          <td> <img src="<%=@user_anime[:anime_images][0]%>"> </td>
+          <% @post1 %>
         </tr>
       </tbody>
     </table>
