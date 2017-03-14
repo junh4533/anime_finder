@@ -21,7 +21,7 @@ class ApplicationController < Sinatra::Base
 
   post '/result' do
     @user_anime = find_anime(params[:anime_name])
-    erb :result
+    erb :result1
   end
 
 end
