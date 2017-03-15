@@ -20,27 +20,17 @@
       
     </script>
     <style>
-/*body{*/
-/*  background: linear-gradient(to right, red , yellow);*/
-/*}*/
-      /*h1 {*/
-      /*  color: #000050;*/
-      /*  font-size: 40px;*/
-      /*}*/
-      
-      /*#header {*/
-      /*  position: relative;*/
-      /*  margin: auto;*/
-      /*  width: 300px;*/
-      /*  top: 350px;*/
-      /*}*/
-      
-      
+    
       html, body {
         padding:0;
-    margin:0;
-    height:100%;
+        margin:0;
+        height:100%;
       }
+      
+      h1{
+        color: #ffe123;
+      }
+      
       #upperHalf {
         height:50vh;
         background-image: url("https://secure.static.tumblr.com/5c7a0ce9d748e18e942b5329c1d2be24/h0nfxeg/GyGnwb3gp/tumblr_static_9ee5cob8ktoog4sco84s4k0k8_640_v2.jpg");
@@ -49,7 +39,7 @@
         text-align: center;
         background-blend-mode: multiply;
         background-color: rgba(0, 0, 0, 0.6);
-        color: #ffe123;
+        
       }
       #lowerHalf {
         background: #fff1e6;
@@ -59,10 +49,9 @@
         position: absolute;
         text-align:center;
         width: 100%;
-        top: 30%;
-
+        top: 50%;
+        transform: translateY(-50%);
       }
-  
     </style>
   </head>
   <body>
@@ -72,7 +61,8 @@
         <div class="col-12"> 
           <div id="center"> <h1>Welcome to anime finder!!!</h1>
             <form method="post" action="/result">
-              <input type="text" name="anime_name" placeholder= "Enter anime name here"> &nbsp
+              <input type="text" name="anime_name" placeholder= "Enter anime name here">
+              &nbsp
               <button class='pure-button'>Search</button>
             </form>
           </div>
