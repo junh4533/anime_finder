@@ -1,5 +1,6 @@
 require 'myanimelist_client'
 require 'pp'
+# https://github.com/Oli4242/myanimelist_client
 
 def find_anime(anime_input)
   client = MyanimelistClient.new 'junh4533', 'weiqing4533weiqing4533'
@@ -43,7 +44,7 @@ def find_anime(anime_input)
 			 # :rating => ""
 		  # }
     # }
-    # test = client.search_anime "kimi no na wa" 
+    test = client.search_anime " " 
     results.sort_by(&:score).reverse!.each do |anime| #search reuslts that includes the key word and sorts in descending score
       # "#{anime.title} (#{anime.english}) - #{anime.score}"
       # puts anime.inspect
@@ -53,9 +54,9 @@ def find_anime(anime_input)
       anime_info[:anime_images] << anime.image
     end
     
-    # test.sort_by(&:score).reverse!.each do |anime| #search reuslts that includes the key word and sorts in descending score
-    #   puts anime.title
-    # end
+    test.sort_by(&:score).reverse.each do |anime| #search reuslts that includes the key word and sorts in descending score
+      pp anime.score
+    end
     
     # puts anime_images
     return anime_info
