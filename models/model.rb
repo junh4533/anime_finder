@@ -54,9 +54,9 @@ def find_anime(anime_input)
       anime_info[:anime_images] << anime.image
     end
     
-    test.sort_by(&:score).reverse.each do |anime| #search reuslts that includes the key word and sorts in descending score
-      pp anime.score
-    end
+    # test.sort_by(&:score).reverse.each do |anime| #search reuslts that includes the key word and sorts in descending score
+    #   pp anime.score
+    # end
     
     # puts anime_images
     return anime_info
