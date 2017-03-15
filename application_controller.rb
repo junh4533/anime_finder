@@ -11,7 +11,8 @@ require_relative 'models/model.rb'
 class ApplicationController < Sinatra::Base
 
   get '/' do
-    erb :index
+    # erb :index
+    erb:result1
   end
   
   post '/result1' do
