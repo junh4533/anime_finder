@@ -24,6 +24,26 @@ class ApplicationController < Sinatra::Base
     @user_anime = @@user_anime
     erb :result1
   end
+  
+  post '/result2' do
+    @user_anime = @@user_anime
+    erb :result2
+  end
+  
+  post '/result3' do
+    @user_anime = @@user_anime
+    erb :result3
+  end
+  
+  post '/result4' do
+    @user_anime = @@user_anime
+    erb :result4
+  end
+  
+  post '/result5' do
+    @user_anime = @@user_anime
+    erb :result5
+  end
 
 end
 
