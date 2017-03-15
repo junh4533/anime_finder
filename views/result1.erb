@@ -34,17 +34,14 @@
         background: red;
         /*position: relative;*/
         /*height:50vh;*/
-        /*float: left;*/
       }
       #desc {
-        /*position: relative;*/
         /*height:50vh;*/
-        background:blue;
-        /*float: right;*/
+        background:#E8ECF1;
       }
       
-      img {
-        
+      #review{
+       color:#5294ED;
       }
       
     </style>
@@ -64,9 +61,10 @@
        </div>
        
   </div>
+
   
   <div class="col-xs-12 col-md-8 " id="desc">
-    <%= @user_anime[:anime_synopsis][0] %>
+    <p id="review"><%= @user_anime[:anime_synopsis][0] %></p>
   </div>
   
 </div>
