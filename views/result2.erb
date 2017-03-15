@@ -14,29 +14,60 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <!-- custom JS -->
     <script src="js/script.js"></script>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .col-1 {width: 8.33%;}
+      .col-2 {width: 16.66%;}
+      .col-3 {width: 25%;}
+      .col-4 {width: 33.33%;}
+      .col-5 {width: 41.66%;}
+      .col-6 {width: 50%;}
+      .col-7 {width: 58.33%;}
+      .col-8 {width: 66.66%;}
+      .col-9 {width: 75%;}
+      .col-10 {width: 83.33%;}
+      .col-11 {width: 91.66%;}
+      .col-12 {width: 100%;}
+      #img {
+        background: red;
+        position: relative;
+        height:50vh;
+        float: left;
+      }
+      #desc {
+        position: relative;
+        height:50vh;
+        background:blue;
+        float: right;
+      }
+      /*#review {*/
+      /*  position: relative;*/
+      /*  height:50vh;*/
+      /*  top:50vh;*/
+      /*  background: green;*/
+      /*}*/
+    </style>
   </head>
   <body>
-    
-<!--<div class="container">-->
+  
+<div class="row">
+  
+  <div class="col-5" id="img">
+    <%= @user_anime[:anime_titles][1] %>
+    <img src="<%= @user_anime[:anime_images][1] %>">
+    <%= @user_anime[:anime_ratings][1] %>
+  </div>
 
-    <!--click on link results-->
-<!--    <table class="table table-striped">-->
-<!--      <thead>-->
-<!--        <tr>-->
-<!--          <th>Results</th>-->
-<!--        </tr>-->
-<!--      </thead>-->
-<!--      <tbody>-->
-<!--        <tr>-->
-<!--          <td><%=@user_anime[:anime_titles][1]%></td>-->
-<!--          <td><%=@user_anime[:anime_ratings][1]%></td>-->
-<!--          <td><%=@user_anime[:anime_synopsis][1]%></td>-->
-<!--          <td> <img src="<%=@user_anime[:anime_images][1]%>"> </td>-->
-<!--        </tr>-->
-<!--      </tbody>-->
-<!--    </table>-->
-     
-<!--</div>-->
+  <div class="col-7" id="desc">
+    <%= @user_anime[:anime_synopsis][1] %>
+  </div>
+    
+    <!--<div class="col-12" id="review">-->
+
+    <!--</div>-->
+</div>
     
   </body>
 </html>

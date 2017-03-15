@@ -11,21 +11,19 @@ require_relative 'models/model.rb'
 class ApplicationController < Sinatra::Base
 
   get '/' do
-    # erb :index
-    erb:result1
+    erb :index
   end
   
   post '/result' do
     @@user_anime = find_anime(params[:anime_name])
+    @user_anime = @@user_anime
     erb :result
   end
   
   post '/result1' do
-    # @post1 = params[:hidden_info]
-    puts @@user_anime
+    @user_anime = @@user_anime
     erb :result1
   end
-
 
 end
 

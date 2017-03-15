@@ -12,42 +12,9 @@ def find_anime(anime_input)
       :anime_synopsis => [],
       :anime_images => []
     }
-    # anime_info = {
-    #   :anime1 => {
-			 # :title => "",
-			 # :synopsis => "",
-			 # :image_link => "",
-			 # :rating => ""
-		  # },
-		  # :anime2 => {
-			 # :title => "",
-			 # :synopsis => "",
-			 # :image_link => "",
-			 # :rating => ""
-		  # },
-		  # :anime3 => {
-			 # :title => "",
-			 # :synopsis => "",
-			 # :image_link => "",
-			 # :rating => ""
-		  # },
-		  # :anime4 => {
-			 # :title => "",
-			 # :synopsis => "",
-			 # :image_link => "",
-			 # :rating => ""
-		  # },
-		  # :anime5 => {
-			 # :title => "",
-			 # :synopsis => "",
-			 # :image_link => "",
-			 # :rating => ""
-		  # }
-    # }
-    test = client.search_anime " " 
+    # test = client.search_anime " " 
     results.sort_by(&:score).reverse!.each do |anime| #search reuslts that includes the key word and sorts in descending score
       # "#{anime.title} (#{anime.english}) - #{anime.score}"
-      # puts anime.inspect
       anime_info[:anime_titles] << anime.title #list of 5 animes
       anime_info[:anime_ratings] << anime.score
       anime_info[:anime_synopsis] << anime.synopsis
@@ -58,7 +25,6 @@ def find_anime(anime_input)
     #   pp anime.score
     # end
     
-    # puts anime_images
     return anime_info
   end
 
