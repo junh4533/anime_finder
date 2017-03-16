@@ -1,4 +1,4 @@
-#
+#a
 require 'dotenv/load'
 require 'bundler'
 require 'rubygems'
@@ -39,8 +39,10 @@ class ApplicationController < Sinatra::Base
   
   #submitting results
   post '/result' do
-    @@user_anime = find_anime(params[:anime_name])
-    @user_anime = @@user_anime
+    @@user_anime = find_anime(params[:anime_name]) #run the find_anime method inside model.rb
+    #set the class variable equal to the instance variable 
+    #so that it is visible between the controller and the view
+    @user_anime = @@user_anime 
     erb :result
   end
 
