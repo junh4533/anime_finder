@@ -3,7 +3,7 @@ require 'pp'
 # https://github.com/Oli4242/myanimelist_client
 
 def find_anime(anime_input)
-  client = MyanimelistClient.new 'junh4533', 'weiqing4533weiqing4533' #login info
+  client = MyanimelistClient.new ENV["USERNAME"], ENV["PASSWORD"] #login info
   if client.verify_credentials.ok?
     results = client.search_anime anime_input #search the anime based on user input
     anime_info = {
@@ -21,7 +21,7 @@ def find_anime(anime_input)
       anime_info[:anime_images] << anime.image
     end
 
-    return anime_info 
+    return anime_info #return the hash with all the search results
   end
 
 end
