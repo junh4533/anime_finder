@@ -9,7 +9,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    
     <!-- custom css -->
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <!-- custom JS -->
@@ -30,44 +29,117 @@
       .col-10 {width: 83.33%;}
       .col-11 {width: 91.66%;}
       .col-12 {width: 100%;}
-      #img {
-        background: red;
-        position: relative;
-        height:50vh;
-        float: left;
+      #box {
+        background: #003366;
+        color: white;
       }
+      
+      .row {
+        overflow:hidden;
+      }
+      
+      .row [class*="col-"]{
+        margin-bottom: -99999px;
+        padding-bottom: 99999px;
+      }
+    
       #desc {
-        position: relative;
-        height:50vh;
-        background:blue;
-        float: right;
+        background:#E8ECF1;
       }
-      /*#review {*/
-      /*  position: relative;*/
-      /*  height:50vh;*/
-      /*  top:50vh;*/
-      /*  background: green;*/
-      /*}*/
+      
+      #review{
+       color:#5294ED;
+      }
+      
+       #button{
+        text-align:center;
+      }
+      
+      #prev{
+        float:left;
+      }
+      
     </style>
   </head>
   <body>
   
 <div class="row">
   
-  <div class="col-5" id="img">
-    <%= @user_anime[:anime_titles][4] %>
-    <img src="<%= @user_anime[:anime_images][4] %>">
-    <%= @user_anime[:anime_ratings][4] %>
+  <div class="col-xs-12 col-md-4" id="box">
+    <div class="row">
+      <div class="col-xs-6" id="title_box">
+        <h2><%= @user_anime[:anime_titles][4] %></h2>
+        <h3>Rating: <%= @user_anime[:anime_ratings][4] %>/10</h3>
+      </div>
+      <div class="col-xs-6" id="img_box">
+        <img class="img-responsive img-thumbnail" src="<%= @user_anime[:anime_images][4] %>">
+      </div>
+    </div>
   </div>
 
-  <div class="col-7" id="desc">
-    <%= @user_anime[:anime_synopsis][4] %>
+  
+  <div class="col-xs-12 col-md-8 " id="desc">
+    <p id="review"><%= @user_anime[:anime_synopsis][4] %></p>
   </div>
-    
-    <!--<div class="col-12" id="review">-->
-
-    <!--</div>-->
+  
 </div>
-    
+
+<table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Related anime</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <form method="post" action="/result1">
+          <button type="submit" style="background:none; border-width:0px; color:#337ab7; "><%=@user_anime[:anime_titles][0]%> </button>
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <form method="post" action="/result2">
+          <button type="submit" style="background:none; border-width:0px; color:#337ab7; "><%=@user_anime[:anime_titles][1]%> </button>
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <form method="post" action="/result3">
+          <button type="submit" style="background:none; border-width:0px; color:#337ab7; "><%=@user_anime[:anime_titles][2]%> </button>
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <form method="post" action="/result4">
+          <button type="submit" style="background:none; border-width:0px; color:#337ab7; "><%=@user_anime[:anime_titles][3]%> </button>
+          </form>
+        </td>
+      </tr>
+      
+    </tbody>
+  </table>
+
+<div id="button">
+  
+  <!--previous button-->
+  <form method="get" action="/result" id="prev">
+    <button  type="submit" class="btn btn-link">
+      <span class="glyphicon glyphicon-menu-left"></span>
+    </button>
+  </form>
+  <!--home button-->
+  <form method="get" action="/index" id="home">
+    <button  type="submit" class="btn btn-link">
+      <span class="glyphicon glyphicon-home"></span>
+    </button>
+  </form>
+
+</div>
+
+
   </body>
 </html>
