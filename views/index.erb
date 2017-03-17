@@ -32,7 +32,7 @@
       }
       
       #upperHalf {
-        height:50vh;
+        height:50vh; /*vh = view height (value is relative to screen size)*/
         background-image: url("index_cover.jpg");
         background-repeat: no-repeat;
         background-size: cover;
@@ -43,7 +43,8 @@
       
       #lowerHalf {
         background: #fff1e6;
-        height:50vh;
+        height:100%;
+        text-align:center;
       }
       
       #center {
@@ -53,7 +54,42 @@
         top: 50%;
         transform: translateY(-50%);
       }
+      
+      .pure-button {
+         border-style: solid;
+        border-color:#789edb;
+        border-width:1px;
+      }
+      
+      #recom{
+        text-align:center;
+        margin-top:75px;
+        color: #003399;
+      }
+      
+      .first_recom {
+        height:30vh;
+        width:30vh;
+        margin:10px;
+         display: inline-block;
+      }
+      
+      .first_recom img {
+        width:100%;
+        height:100%;
+        border:0;
+      }
+      
+      .first_recom:hover .image {
+        opacity: 0.3;
+      }
+      
+      .first_recom:hover .middle {
+        opacity: 1;
+      }
+  
     </style>
+
   </head>
   <body>
   <div class="container-fluid">
@@ -70,11 +106,57 @@
           
         </div>
       </div>
+      
       <div id="lowerHalf" class="row">
-          <div class="col-12"> 
 
+          <h1 id="recom">Recommendations</h1>
+
+          <div class="first_recom" class="col-xs-12 col-md-6 col-lg-4 col-xl-2">
+            <h3>No Game No Life</h3>
+            <!--creates a form with an iamge-->
+            <form method="post" action="/rec">
+              <input class="img-thumbnail" height="95%vh" width="95%vh" type="image" value="No Game No Life" name="anime_name" src="https://myanimelist.cdn-dena.com/images/anime/5/65187.jpg" alt="Submit Form" />
+            </form>
           </div>
-      </div>
-        
+          
+          <div class="first_recom" class="col-xs-12 col-md-6 col-lg-4 col-xl-2">
+            <h3>Assassination Classroom</h3>
+            <form method="post" action="/rec">
+              <input class="img-thumbnail" height="100%vh" width="100%vh" type="image" value="Assassination Classroom" name="anime_name" src="https://myanimelist.cdn-dena.com/images/anime/8/77966.jpg" alt="Submit Form" />
+            </form>
+          </div>
+         
+          <div class="first_recom" class="col-xs-12 col-md-6 col-lg-4 col-xl-2">
+            <h3>Your Lie in April</h3>
+            <form method="post" action="/rec">
+              <input class="img-thumbnail" height="90%vh" width="90%vh" type="image" value="Your Lie in April" name="anime_name" src="https://myanimelist.cdn-dena.com/images/anime/3/67177.jpg" alt="Submit Form" />
+            </form>
+          </div>
+          
+          <div class="first_recom" class="col-xs-12 col-md-6 col-lg-4 col-xl-2">
+            <h3>Tokyo Ghoul</h3>
+            <form method="post" action="/rec">
+              <input class="img-thumbnail" height="100%vh" width="100%vh" type="image" value="Tokyo Ghoul" name="anime_name" src="https://myanimelist.cdn-dena.com/images/anime/5/64449.jpg" alt="Submit Form" />
+            </form>
+          </div>
+          
+          <div class="first_recom" class="col-xs-12 col-md-6 col-lg-4 col-xl-2">
+            <h3>Angel Beats!</h3>
+            <form method="post" action="/rec">
+              <input class="img-thumbnail" height="95%vh" width="95%vh" type="image" value="Angel Beats!" name="anime_name" src="https://myanimelist.cdn-dena.com/images/anime/10/22061.jpg" alt="Submit Form" />
+            </form>
+          </div>
+          
+          <div class="first_recom" class="col-xs-12 col-md-6 col-lg-4 col-xl-2">
+            <h3>Death Note</h3>
+            <form method="post" action="/rec">
+              <input class="img-thumbnail" height="100%vh" width="100%vh" type="image" value="Death Note" name="anime_name" src="https://myanimelist.cdn-dena.com/images/anime/9/9453.jpg" alt="Submit Form" />
+            </form>
+          </div>
+          
+       </div>
+   
+   
+</div>
   </body>
 </html>

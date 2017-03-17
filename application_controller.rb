@@ -1,4 +1,5 @@
-#a
+# https://github.com/Oli4242/myanimelist_client
+
 require 'dotenv/load'
 require 'bundler'
 require 'rubygems'
@@ -30,13 +31,7 @@ class ApplicationController < Sinatra::Base
   get '/index' do
     erb :index
   end
-  
-  #previous button
-  get '/result' do
-    @user_anime = @@user_anime
-    erb :result
-  end
-  
+
   #submitting results
   post '/result' do
     @@user_anime = find_anime(params[:anime_name]) #run the find_anime method inside model.rb
@@ -45,7 +40,20 @@ class ApplicationController < Sinatra::Base
     @user_anime = @@user_anime 
     erb :result
   end
-
+  
+  #previous button
+  get '/result' do
+    @user_anime = @@user_anime
+    erb :result
+  end
+  
+  #recommendation page
+  post '/rec' do
+    @user_anime = find_anime(params[:anime_name])
+    erb :rec
+  end
+  
+  #5 result pages
   post '/result1' do
     @user_anime = @@user_anime
     erb :result1
