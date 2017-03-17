@@ -87,7 +87,14 @@
       .first_recom:hover .middle {
         opacity: 1;
       }
-  
+      
+      .form-control{
+        min-width: 0;
+        width: 30vw;
+        text-align:center;
+        display: inline-block;
+      }
+
     </style>
 
   </head>
@@ -96,9 +103,9 @@
 
       <div id="upperHalf" class="row" >
         <div class="col-12"> 
-          <div id="center"> <h1>Welcome to anime finder!</h1>
+          <div id="center"> 
             <form method="post" action="/result">
-              <input type="text" name="anime_name" placeholder= "Enter anime name here">
+              <input class="form-control" type="text" name="anime_name" placeholder= "Enter anime name here" >
               &nbsp
               <button class='pure-button'>Search</button>
             </form>
@@ -115,7 +122,7 @@
             <h3>No Game No Life</h3>
             <!--creates a form with an iamge-->
             <form method="post" action="/rec">
-              <input class="img-thumbnail" height="95%vh" width="95%vh" type="image" value="No Game No Life" name="anime_name" src="https://myanimelist.cdn-dena.com/images/anime/5/65187.jpg" alt="Submit Form" />
+              <input class="img-thumbnail" height="100%vh" width="100%vh" type="image" value="No Game No Life" name="anime_name" src="https://myanimelist.cdn-dena.com/images/anime/5/65187.jpg" alt="Submit Form" />
             </form>
           </div>
           
@@ -150,7 +157,7 @@
           <div class="first_recom" class="col-xs-12 col-md-6 col-lg-4 col-xl-2">
             <h3>Death Note</h3>
             <form method="post" action="/rec">
-              <input class="img-thumbnail" height="100%vh" width="100%vh" type="image" value="Death Note" name="anime_name" src="https://myanimelist.cdn-dena.com/images/anime/9/9453.jpg" alt="Submit Form" />
+              <input class="img-thumbnail" height="95%vh" width="95%vh" type="image" value="Death Note" name="anime_name" src="https://myanimelist.cdn-dena.com/images/anime/9/9453.jpg" alt="Submit Form" />
             </form>
           </div>
           
